@@ -61,29 +61,108 @@ body, html {
 }
 
 #timelineProgressBar {
-    background-color: gray;
+    background-color:gray;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    bottom: -0.75rem;
+    bottom: -0.5rem;
     left: 12.5%;
     width: 75%;
-    height: 1.5rem;
-    border-radius: 1rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+}
+
+#timelineProgressBar:after {
+    background-color: red;
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 33.33%;
+    height: 1rem;
+    border-radius: 0.5rem;
+    animation: timelineProgressBar 10s infinite;
+}
+
+@keyframes timelineProgressBar {
+    0% {width: 0%;}
+    15% {width: 0%;}
+    25% {width: 33.33%;}
+    40% {width: 33.33%;}
+    50% {width: 66.66%;}
+    65% {width: 66.66%;}
+    75% {width: 100%;}
+    90% {width: 100%; opacity: 1;}
+    100% {opacity: 0;}
 }
 
 .timelineProgressNode {
-    background-color: gray;
-    width: 3rem;
-    height: 3rem;
+    background-color: white;
+    z-index: 2;
+    width: 0.5rem;
+    height: 0.5rem;
+    border: white solid 0.25rem;
     border-radius: 1.5rem;
+    box-shadow: 0 0 0 0.25rem gray;
+}
+
+#timelineProgressNode1 {
+    animation: timelineProgressNode1 10s infinite;
+    box-shadow: 0 0 0 0.25rem red;
+}
+
+@keyframes timelineProgressNode1 {
+    0% {background-color: red;}
+    15% {background-color: red;}
+    25% {background-color: white;}
+    90% {background-color: white;}
+    100% {background-color: red;}
+}
+
+#timelineProgressNode2 {
+    animation: timelineProgressNode2 10s infinite;
+}
+
+@keyframes timelineProgressNode2 {
+    0% {background-color: white; box-shadow: 0 0 0 0.25rem gray;}
+    25% {background-color: white; box-shadow: 0 0 0 0.25rem gray;}
+    30% {background-color: red; box-shadow: 0 0 0 0.25rem red;}
+    40% {background-color: red; box-shadow: 0 0 0 0.25rem red;}
+    50% {background-color: white; box-shadow: 0 0 0 0.25rem red;}
+    90% {background-color: white; box-shadow: 0 0 0 0.25rem red;}
+    100% {background-color: white; box-shadow: 0 0 0 0.25rem gray;}
+}
+
+#timelineProgressNode3 {
+    animation: timelineProgressNode3 10s infinite;
+}
+
+@keyframes timelineProgressNode3 {
+    0% {background-color: white; box-shadow: 0 0 0 0.25rem gray;}
+    50% {background-color: white; box-shadow: 0 0 0 0.25rem gray;}
+    55% {background-color: red; box-shadow: 0 0 0 0.25rem red;}
+    65% {background-color: red; box-shadow: 0 0 0 0.25rem red;}
+    75% {background-color: white; box-shadow: 0 0 0 0.25rem red;}
+    90% {background-color: white; box-shadow: 0 0 0 0.25rem red;}
+    100% {background-color: white; box-shadow: 0 0 0 0.25rem gray;}
+}
+
+#timelineProgressNode4 {
+    animation: timelineProgressNode4 10s infinite;
+}
+
+@keyframes timelineProgressNode4 {
+    0% {background-color: white; box-shadow: 0 0 0 0.25rem gray;}
+    75% {background-color: white; box-shadow: 0 0 0 0.25rem gray;}
+    80% {background-color: red; box-shadow: 0 0 0 0.25rem red;}
+    90% {background-color: red; box-shadow: 0 0 0 0.25rem red;}
+    100% {background-color: white; box-shadow: 0 0 0 0.25rem gray;}
 }
 
 /* About section */
 
 #aboutSection {
-    background-color: red;
+    background-color: orange;
     display: flex;
     flex-direction: column;
     justify-content: center;
