@@ -1,10 +1,12 @@
 /* Base HTML stuff */
 
-body {
+body, html {
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-size: 20px !important;
 }
 
 .sectionHeading {
@@ -25,14 +27,14 @@ body {
     background-color: pink;
     position: sticky;
     width: 100%;
-    height: 4rem;
+    height: 3rem;
 }
 
 /* Villain Container */ 
 
 #villainSectionContainer {
     width: 100%;
-    height: calc(100vh - 4rem);
+    height: calc(100vh - 3rem);
 }
 
  /* Project timeline section */
@@ -88,6 +90,7 @@ body {
     align-items: center;
     width: 100%;
     height: 20%;
+    box-sizing: border-box;
     padding-top: 0.75rem;
 }
 
