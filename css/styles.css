@@ -1,6 +1,7 @@
 /* Base HTML stuff */
 
 body, html {
+    color: var(--fontColour);
     width: 100%;
     height: 100%;
     margin: 0;
@@ -19,12 +20,25 @@ body, html {
     font-size: 1.5rem;
 }
 
+/* Theme section */
 
+:root {
+    --highlightColourPrimary: #f73c39;
+    --highlightColourSecondary: #f78739; 
+    --UIBackgroundPrimary: #181818;
+    --UIBackgroundSecondary: #010101;
+    --fontColour: #f2f2f2;
+    --UIBase: #282b30;
+    --UIDarker: #1e2124;
+    --UILighter: #42464d;
+    --UIHover: #2C3034;
+
+}
 
 /* Navbar section */
 
 #navbar {
-    background-color: pink;
+    background-color: var(--UIBase);
     position: sticky;
     width: 100%;
     height: 3rem;
@@ -40,48 +54,48 @@ body, html {
  /* Project timeline section */
 
 #projectTimelineSection {
-    background-color: green;
+    background-color: var(--UIBackgroundPrimary);
     position: relative;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 35%;
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
 }
 
 .timelineItem {
-    background-color: green;
+    background-color: var(--UIBackgroundPrimary);
     height: 100%;
     width: 100%;
 }
 
 .timelineItemActive {
-    background-color: yellow;
+    
 }
 
 #timelineProgressBar {
-    background-color:gray;
+    background-color:var(--UILighter);
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    bottom: -0.5rem;
+    bottom: -0.25rem;
     left: 12.5%;
     width: 75%;
-    height: 1rem;
+    height: 0.5rem;
     border-radius: 0.5rem;
 }
 
 #timelineProgressBar:after {
-    background-color: red;
+    background: linear-gradient(270deg, var(--highlightColourPrimary) 0%, var(--highlightColourPrimary) 25%, var(--highlightColourSecondary) 100%);
     content: "";
     position: absolute;
     z-index: 1;
     width: 33.33%;
-    height: 1rem;
+    height: 0.5rem;
     border-radius: 0.5rem;
-    animation: timelineProgressBar 10s infinite;
+    animation: timelineProgressBar 20s infinite;
 }
 
 @keyframes timelineProgressBar {
@@ -103,66 +117,67 @@ body, html {
     height: 0.5rem;
     border: white solid 0.25rem;
     border-radius: 1.5rem;
-    box-shadow: 0 0 0 0.25rem gray;
+    box-shadow: 0 0 0 0.25rem var(--UILighter);
 }
 
 #timelineProgressNode1 {
-    animation: timelineProgressNode1 10s infinite;
-    box-shadow: 0 0 0 0.25rem red;
+    animation: timelineProgressNode1 20s infinite;
+    box-shadow: 0 0 0 0.25rem var(--highlightColourPrimary);
 }
 
 @keyframes timelineProgressNode1 {
-    0% {background-color: red;}
-    15% {background-color: red;}
-    25% {background-color: white;}
-    90% {background-color: white;}
-    100% {background-color: red;}
+    0% {background-color: var(--highlightColourPrimary); box-shadow: 0 0 0 0.25rem var(--highlightColourPrimary);}
+    15% {background-color: var(--highlightColourPrimary); box-shadow: 0 0 0 0.25rem var(--highlightColourPrimary);}
+    25% {background-color: white; box-shadow: 0 0 0 0.25rem var(--highlightColourSecondary);}
+    90% {background-color: white; box-shadow: 0 0 0 0.25rem var(--highlightColourSecondary);}
+    100% {background-color: var(--highlightColourPrimary);}
 }
 
 #timelineProgressNode2 {
-    animation: timelineProgressNode2 10s infinite;
+    animation: timelineProgressNode2 20s infinite;
 }
 
 @keyframes timelineProgressNode2 {
-    0% {background-color: white; box-shadow: 0 0 0 0.25rem gray;}
-    25% {background-color: white; box-shadow: 0 0 0 0.25rem gray;}
-    30% {background-color: red; box-shadow: 0 0 0 0.25rem red;}
-    40% {background-color: red; box-shadow: 0 0 0 0.25rem red;}
-    50% {background-color: white; box-shadow: 0 0 0 0.25rem red;}
-    90% {background-color: white; box-shadow: 0 0 0 0.25rem red;}
-    100% {background-color: white; box-shadow: 0 0 0 0.25rem gray;}
+    0% {background-color: white; box-shadow: 0 0 0 0.25rem var(--UILighter);}
+    23% {background-color: white; box-shadow: 0 0 0 0.25rem var(--UILighter);}
+    26% {background-color: var(--highlightColourPrimary); box-shadow: 0 0 0 0.25rem var(--highlightColourPrimary);}
+    40% {background-color: var(--highlightColourPrimary); box-shadow: 0 0 0 0.25rem var(--highlightColourPrimary);}
+    50% {background-color: var(--fontColour);}
+    75% {background-color: white; box-shadow: 0 0 0 0.25rem var(--highlightColourSecondary);}
+    90% {background-color: white; box-shadow: 0 0 0 0.25rem var(--highlightColourSecondary);}
+    100% {background-color: white; box-shadow: 0 0 0 0.25rem var(--UILighter);}
 }
 
 #timelineProgressNode3 {
-    animation: timelineProgressNode3 10s infinite;
+    animation: timelineProgressNode3 20s infinite;
 }
 
 @keyframes timelineProgressNode3 {
-    0% {background-color: white; box-shadow: 0 0 0 0.25rem gray;}
-    50% {background-color: white; box-shadow: 0 0 0 0.25rem gray;}
-    55% {background-color: red; box-shadow: 0 0 0 0.25rem red;}
-    65% {background-color: red; box-shadow: 0 0 0 0.25rem red;}
-    75% {background-color: white; box-shadow: 0 0 0 0.25rem red;}
-    90% {background-color: white; box-shadow: 0 0 0 0.25rem red;}
-    100% {background-color: white; box-shadow: 0 0 0 0.25rem gray;}
+    0% {background-color: white; box-shadow: 0 0 0 0.25rem var(--UILighter);}
+    48% {background-color: white; box-shadow: 0 0 0 0.25rem var(--UILighter);}
+    51% {background-color: var(--highlightColourPrimary); box-shadow: 0 0 0 0.25rem var(--highlightColourPrimary);}
+    65% {background-color: var(--highlightColourPrimary); box-shadow: 0 0 0 0.25rem var(--highlightColourPrimary);}
+    75% {background-color: white; box-shadow: 0 0 0 0.25rem var(--highlightColourPrimary);}
+    90% {background-color: white; box-shadow: 0 0 0 0.25rem var(--highlightColourPrimary);}
+    100% {background-color: white; box-shadow: 0 0 0 0.25rem var(--UILighter);}
 }
 
 #timelineProgressNode4 {
-    animation: timelineProgressNode4 10s infinite;
+    animation: timelineProgressNode4 20s infinite;
 }
 
 @keyframes timelineProgressNode4 {
-    0% {background-color: white; box-shadow: 0 0 0 0.25rem gray;}
-    75% {background-color: white; box-shadow: 0 0 0 0.25rem gray;}
-    80% {background-color: red; box-shadow: 0 0 0 0.25rem red;}
-    90% {background-color: red; box-shadow: 0 0 0 0.25rem red;}
-    100% {background-color: white; box-shadow: 0 0 0 0.25rem gray;}
+    0% {background-color: white; box-shadow: 0 0 0 0.25rem var(--UILighter);}
+    73% {background-color: white; box-shadow: 0 0 0 0.25rem var(--UILighter);}
+    76% {background-color: var(--highlightColourPrimary); box-shadow: 0 0 0 0.25rem var(--highlightColourPrimary);}
+    90% {background-color: var(--highlightColourPrimary); box-shadow: 0 0 0 0.25rem var(--highlightColourPrimary);}
+    100% {background-color: white; box-shadow: 0 0 0 0.25rem var(--UILighter);}
 }
 
 /* About section */
 
 #aboutSection {
-    background-color: orange;
+    background-color: var(--UIDarker);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -176,7 +191,7 @@ body, html {
 /* Services section */
 
 #servicesSection {
-    background-color: red;
+    background-color: var(--UIDarker);
     display: flex;
     box-sizing: border-box;
     flex-direction: row;
@@ -190,7 +205,7 @@ body, html {
 }
 
 .servicesItem {
-    background-color: yellow;
+    background-color: var(--UIBase);
     height: 100%;
     width: 100%;
     margin-bottom: -1rem;
