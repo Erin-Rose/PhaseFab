@@ -1,0 +1,135 @@
+<svg style="animation-play-state: paused;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 76.1 47.69">
+  <defs>
+    <linearGradient id="linear-gradient" x1="5.36" x2="5.99" y1="28.5" y2="32.07" gradientUnits="userSpaceOnUse">
+      <stop offset="0.2" stop-color="#f78739"/>
+      <stop offset="1" stop-color="#f73c39"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="51.33" x2="52" y1="32.19" y2="28.38" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="15.48" x2="52.94" y1="33.37" y2="11.08" xlink:href="#linear-gradient"/>
+    <linearGradient id="primary_gradient" x1="19.23" x2="10.1" y1="3.17" y2="12.29" xlink:href="#linear-gradient-3"/>
+  </defs>
+
+  <circle id="pedalAnimationPath" cx="34.86" cy="32.67" r="7.17" fill="none"/> <!-- pedal anim path -->
+
+  <style>
+    .rearSpin {
+      animation: spin 1s infinite linear;
+      transform-origin: 19.658% 68.505%;
+    }
+
+    .frontSpin {
+      animation: spin 1s infinite linear;
+      transform-origin: 80.237% 68.505%;
+    }
+
+    .crankSpin {
+    animation: spin 2s infinite linear;
+    transform-origin: 45.808% 68.505%;
+    } 
+
+    .rearPedalSpin {
+      animation: reverseSpin 2s infinite linear;
+      transform-origin: 38.528% 58.964%;
+    }
+
+    .frontPedalSpin {
+      animation: reverseSpin 2s infinite linear;
+      transform-origin: 53.075% 78.046%;
+    }
+
+    @keyframes reverseSpin {
+      0% {transform: rotate(360deg);}
+      100% {transform: rotate(0deg);}
+    }
+
+    @keyframes spin {
+      0% {transform: rotate(0deg);}
+      100% {transform: rotate(360deg);}
+    }
+  </style>
+
+  <g stroke-linecap="round">
+
+    <g class="crankSpin"> <!-- rear pedal assembly -->
+      <path class="rearPedalSpin" d="M28.07 28.12h2.51" stroke="#999" stroke-width="1.5"/>
+      <path d="M29.32 28.12l5.54 4.55" stroke="#4d4d4d" stroke-width="1.5"/>
+    </g>
+
+    <g> <!-- rear wheel -->
+      <circle cx="14.96" cy="32.67" r="13.71" fill="#f2f2f2"/>
+      <path d="M15 20.21A12.46 12.46 0 112.5 32.67 12.47 12.47 0 0115 20.21m0-2.5a15 15 0 1015 15 15 15 0 00-15-15z" fill="#333"/>
+      <path class="rearSpin" d="M15 32.68L3 35.91a12.16 12.16 0 013.23-12zM15 32.68l12-3.22a12.13 12.13 0 01-3.22 12z" fill="#e6e6e6"/>
+      <path d="M15 20.68a12 12 0 11-12 12 12 12 0 0112-12m0-1a13 13 0 1013 13 13 13 0 00-13-13z" fill="gray"/>
+      <g class="rearSpin">
+        <path d="M5.32 31.68a10.8 10.8 0 01.38-1.88c.1-.31.21-.61.34-.91" stroke="#b3b3b3" stroke-width="2"/>
+        <path fill="none" stroke="url(#linear-gradient)" d="M5.32 31.68a10.8 10.8 0 01.38-1.88c.1-.31.21-.61.34-.91"/>
+      </g>
+    </g>
+
+    <g> <!-- front wheel -->
+      <circle cx="61.06" cy="32.67" r="13.71" fill="#f2f2f2"/> 
+      <path d="M61.06 20.21A12.46 12.46 0 1148.6 32.67a12.47 12.47 0 0112.46-12.46m0-2.5a15 15 0 1015 15 15 15 0 00-15-15z" fill="#333"/>
+      <path class="frontSpin" d="M61 32.68l-12 3.23a12.16 12.16 0 013.23-12zM61 32.68l12-3.22a12.13 12.13 0 01-3.22 12z" fill="#e6e6e6"/>
+      <path d="M61 20.68a12 12 0 11-12 12 12 12 0 0112-12m0-1a13 13 0 1013 13 13 13 0 00-13-13z" fill="gray"/>
+      <g class="frontSpin" transform="rotate(180)">
+        <path d="M51.32 31.68a10.8 10.8 0 01.38-1.88c.1-.31.21-.61.34-.91" stroke="#b3b3b3" stroke-width="2"/>
+        <path fill="none" stroke="url(#linear-gradient-2)" d="M51.32 31.68a10.8 10.8 0 01.38-1.88c.1-.31.21-.61.34-.91"/>
+      </g>
+    </g>
+
+    <circle cx="61.01" cy="32.68" r="2" fill="none" stroke="#999"/> <!-- front brake -->
+
+    <g> <!-- chain assembly -->
+      <path d="M15.01 30.68L30.49 30M15.01 34.68l19.85.86" stroke="#666" stroke-width="0.75"/>
+      <circle cx="15.01" cy="32.68" r="2" fill="none" stroke="#999"/>
+    </g>
+
+    <g> <!-- cargo rack -->
+      <path d="M15.01 32.68L9.26 15.75M15.01 32.68l5.65-16.93" stroke="#b3b3b3"/>
+      <path d="M9.26 15.75h11.4M20.66 15.75l4.96 3.12M9.26 15.75h-3.1" stroke="#999"/>
+    </g>
+    
+    <g> <!-- saddle -->
+      <path d="M26.95 14.71l-1.63-3.69" stroke="#b3b3b3" stroke-width="2"/>
+      <path d="M20.04 9.35l.96 1.22M25.12 10.73L21 10.57" stroke="#b3b3b3"/>
+      <path d="M24 8.11c-1.86 0-2.4-.19-3.35-.16-.79 0-1.91.79-1.36 1.74 2.66.05 4.62.88 5.15 1.69L29.72 9a.42.42 0 00.28-.33c0-.56-.42-1.1-1.35-1.06a45.27 45.27 0 01-4.65.5z" fill="#333"/>
+    </g>
+
+    <g> <!-- handlebars -->
+      <path d="M51.37 6.93l-1.18-3.15" stroke="#b3b3b3" stroke-width="2"/>
+      <path d="M50.19 3.78l2.65-.95" stroke="#b3b3b3" stroke-width="2"/>
+      <path fill="none" stroke="#999" stroke-width="1.5" d="M52.84 2.83l-1.81-1.8"/>
+      <path fill="none" stroke="#333" stroke-width="2" d="M51.03 1.03L48.26 1"/>
+    </g>
+
+    <g> <!-- frame -->
+      <path fill="none" stroke="#b3b3b3" stroke-width="2" d="M56.48 20.5l-2.05-5.43"/>
+      <path fill="#f73c39" d="M62 32.32l-4.59-12.17a1 1 0 10-1.87.7L60.12 33a1 1 0 00.94.65 1.12 1.12 0 00.35-.06 1 1 0 00.59-1.27z"/>
+      <path fill="url(#linear-gradient-3)" d="M55.72 15.65L52 5.64l-1.87.7.69 1.83a.42.42 0 01-.15.5L32 22.33a.42.42 0 01-.64-.17l-3.5-7.86-1.86.81.35.79a.44.44 0 01-.05.43L14.17 32.06a1 1 0 00-.11 1 1 1 0 00.9.56h19.9a1 1 0 00.39-.08h.07a1.28 1.28 0 00.26-.2l16.88-18.91a.42.42 0 01.71.13l.68 1.8zm-28 3.22l5.37 12.21a.42.42 0 01-.38.59H17l10-12.89a.43.43 0 01.69.09zm7.19 11.36l-2.38-5.4a.44.44 0 01.14-.52l18.49-13.55a.43.43 0 01.66.19l.22.6A.42.42 0 0152 12L35.59 30.34a.42.42 0 01-.71-.11z"/>
+    </g>
+    
+    <path d="M30.49 30l4.37-.2" stroke="#666" stroke-width="0.75"/> <!-- front part of chain -->
+
+    <g class="crankSpin"> <!-- front pedal assembly -->
+      <circle cx="34.86" cy="32.67" r="2.87" fill="none" stroke="#999" stroke-width="2"/>
+      <path d="M34.86 33.52a.85.85 0 010-1.7.85.85 0 010 1.7z"/>
+      <path d="M34.86 30.57a2.1 2.1 0 102.14 2.1 2.1 2.1 0 00-2.09-2.1z" fill="#333"/>
+      <path d="M34.86 32.67l5.53 4.55" stroke="#4d4d4d" stroke-width="1.5"/>
+      <path class="frontPedalSpin" d="M39.14 37.22h2.51" stroke="#999" stroke-width="1.5"/> <!-- front pedal -->
+    </g>
+
+    <g> <!-- box -->
+      <rect width="11.1" height="11.1" x="5.58" y="3.23" fill="#c69c6d" rx=".6"/>
+      <path d="M14.5 6.13V4.3M6.81 4.43h1.97M6.81 5.43h1.97M15.31 4.94l-.81-.64M13.69 4.94l.81-.64" stroke="#534741" stroke-width="0.75"/>
+      <path d="M12.3 5.22l-.6-.32-.57.32-.66-.36-.5.36V3.23h2.33v1.99zM12.3 12.34l-.6.32-.57-.32-.66.36-.5-.36v1.99h2.33v-1.99z" fill="#a67c52"/>
+    </g>
+    
+    <g> <!-- basket -->
+      <path d="M4.05 12.33l2.28 2.28M4.05 9.33l5.28 5.28M6.94 9.22l5.39 5.39M9.94 9.22l5.39 5.39M12.94 9.22l5.11 5.11M15.94 9.22l2.11 2.11" stroke="#d63030" stroke-width="0.75"/>
+      <path fill="url(#primary_gradient)" d="M18.16 7.22h-14a.51.51 0 00-.5.5v7a.51.51 0 00.5.5h14a.5.5 0 00.5-.5v-7a.5.5 0 00-.5-.5zm-4.29 7l3.79-3.79v1.97l-1.85 1.85zm-3 0l4.66-4.66h1.94l-4.66 4.66zm-3 0l4.66-4.66h1.94l-4.66 4.69zm-3 0l4.66-4.63h1.94l-4.66 4.66zm-.21-2.79l1.87-1.84h1.94L4.66 13.4zm0-1.87h.81l-.81.81zm13 3.87v.79h-.79z"/>
+      <path d="M5.04 8.43h12.24" stroke="#d63030" stroke-width="0.75"/>
+      <path d="M10.62 16.26L5.77 7.23M16.45 7.21v9.05" stroke="#f78739" stroke-width="0.75"/>
+    </g>
+
+  </g>
+</svg>
